@@ -54,17 +54,7 @@ a{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
 }
-.hype{
-    margin-left: 480px;
-    margin-top: 33px;
-    position: absolute;
-    background: transparent;
-}
-.baile{
-    margin-left: 1230px;
-    margin-top: 100px;
-    position: absolute;
-}
+
 .torta{
     margin-top: 80px;
     width: 50px;
@@ -75,7 +65,7 @@ a{
     margin-top: 80px;
     width: 50px;
     height: 50px;
-    margin-left: 900px;;
+    margin-left: 1200px;;
     
 }
 
@@ -101,7 +91,7 @@ a{
     padding: 10px;
     margin: 10px;
     background: white;
-    border: 2px solid #940c60;
+    border-left: 2px solid #940c60;
     text-align: left;
 }
 
@@ -202,6 +192,7 @@ a{
 .dia-semana{
     font-size: 40px;
     font-family: 'Kolker brush', cursive;
+    margin-top: 20px;
     color: #700c4a;
     text-shadow: 2px 2px 2px rgb(255, 22, 150);
     text-align: center;
@@ -221,6 +212,13 @@ a{
     color: rgba(0, 0, 0, 0.482);
 }
 
+
+.task{
+    border-left: 3px solid;                                                   
+    padding: 8px 12px;
+    margin: 10px;
+    font-size: 14px;
+}
 
 /*torneoDBD*/
 .task-torneo-1{
@@ -360,7 +358,6 @@ a{
     grid-column: 5/1 span;
     margin-top: -5px;
 }
-
 
 .task-astro{
     border-left-color: rgb(41, 0, 66);
