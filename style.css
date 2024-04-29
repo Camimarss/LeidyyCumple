@@ -11,7 +11,6 @@
     padding: 0;
     background-image: url(img/fondocalendario.jpeg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
     background-color: transparent;
     background-attachment: fixed;
     scroll-behavior: smooth;
@@ -46,11 +45,19 @@ a{
 /*calendario*/
 
 #contenedor-calendario {
+    display: flex;
+    flex-direction: column; /* Por defecto, columnas para móviles y tablets */
+    align-items: center;
+    justify-content: center; /* Centrado en todas las direcciones */
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
     margin-left: 300px;
     margin-bottom: 20px;
     width: 800px;
     text-align: center;
-}.hype{
+}
+.hype{
     margin-left: 480px;
     margin-top: 33px;
     position: absolute;
