@@ -45,13 +45,6 @@ a{
 /*calendario*/
 
 #contenedor-calendario {
-    display: flex;
-    flex-direction: column; /* Por defecto, columnas para móviles y tablets */
-    align-items: center;
-    justify-content: center; /* Centrado en todas las direcciones */
-    padding: 10px;
-    background-color: #e0e0e0;
-    border: 1px solid #ccc;
     margin-left: 300px;
     margin-bottom: 20px;
     width: 800px;
