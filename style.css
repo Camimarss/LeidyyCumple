@@ -9,10 +9,10 @@
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(img/fondocalendario.jpeg);
+    background-image: url(img/fondocalendario.jpeg) ;
     background-color: transparent;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     scroll-behavior: smooth;
 }
@@ -44,12 +44,15 @@ a{
 }
 
 /*calendario*/
-
+/* Estilos para el contenedor-calendario */
 #contenedor-calendario {
-    margin-left: 300px;
-    margin-bottom: 20px;
-    width: 800px;
+    max-width: 1200px; /* Ancho máximo para mantener forma */
+    margin: 0 auto; /* Centrar en la pantalla */
     text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
 }
 .hype{
     margin-left: 480px;
@@ -76,24 +79,72 @@ a{
     
 }
 
-.calendario{
+ /* Estilos para el calendario */
+.calendario {
     list-style: none;
     display: grid;
-    width: 100%;
-    grid-template-columns: repeat(7 , minmax(130px, 1fr));
-    grid-auto-rows: 100px;
-    grid-template-rows: 50px;
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas para la semana */
+    grid-auto-rows: 100px; /* Altura para cada fila */
 }
 
-.dia{
-    padding: 14px 20px;
-    text-align: right;
-    border-bottom: 1px solid #940c60;
-    border-right: 1px solid #940c60;
-    border-left: 1px solid #940c60;
+/* Estilos para los días */
+.dia {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #940c60;
     font-size: 15px;
     background: #fdf5aa9a;
 }
+
+/* Estilos para las tareas */
+.task {
+    padding: 10px;
+    margin: 10px;
+    background: white;
+    border: 2px solid #940c60;
+    text-align: left;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) { /* Tablets y pantallas pequeñas */
+    header {
+        font-size: 80px; /* Reduce tamaño de encabezado */
+    }
+
+    #contenedor-calendario {
+        padding: 10px;
+        width: 100%; /* Ancho completo para pantallas pequeñas */
+    }
+
+    .calendario {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas para pantallas más pequeñas */
+    }
+
+    .dia {
+        font-size: 12px; /* Reduce el tamaño del texto */
+    }
+
+    .task {
+        font-size: 12px; /* Reduce el tamaño del texto */
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (celulares) */
+@media (max-width: 480px) {
+    header {
+        font-size: 50px; /* Ajusta el tamaño del encabezado */
+    }
+
+    .calendario {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas para celulares */
+    }
+
+    .dia {
+        padding: 8px; /* Reduce el padding */
+        font-size: 10px; /* Reduce el tamaño del texto */
+    }
+}
+
 .dia:nth-of-type(7n + 7){
     border-right: none;
 }
@@ -169,12 +220,7 @@ a{
     background: #fdf5aa9a;
     color: rgba(0, 0, 0, 0.482);
 }
-.task{
-    border-left: 3px solid;                                                   
-    padding: 8px 12px;
-    margin: 10px;
-    font-size: 14px;
-}
+
 
 /*torneoDBD*/
 .task-torneo-1{
@@ -315,6 +361,7 @@ a{
     margin-top: -5px;
 }
 
+
 .task-astro{
     border-left-color: rgb(41, 0, 66);
     background: rgb(183, 91, 117);
@@ -350,4 +397,17 @@ a{
 
 .task:hover .task-detail{
     opacity: 1;
+}
+
+/* CSS para el cuerpo y el encabezado */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
 }
