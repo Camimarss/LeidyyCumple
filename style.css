@@ -76,6 +76,10 @@ a{
 }
 
 .calendario{
+    display: flex;
+    flex-wrap: wrap; /* Permite el ajuste de elementos para pantallas más pequeñas */
+    justify-content: center; /* Centrado por defecto */
+    width: 100%; /* Para pantallas pequeñas, ocupan todo el ancho */
     list-style: none;
     display: grid;
     width: 100%;
