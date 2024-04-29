@@ -9,8 +9,7 @@
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(img/fondocalendario.jpeg);
-    background-repeat: no-repeat;
+    background-image: url(img/fondocalendario.jpeg) ;
     background-color: transparent;
     background-attachment: fixed;
     scroll-behavior: smooth;
@@ -45,13 +44,8 @@ a{
 /*calendario*/
 
 #contenedor-calendario {
-    display: flex;
-    flex-direction: column; /* Por defecto, columnas para móviles y tablets */
-    align-items: center;
-    justify-content: center; /* Centrado en todas las direcciones */
-    padding: 10px;
-    background-color: #e0e0e0;
-    border: 1px solid #ccc;
+    margin-left: 300px;
+    margin-bottom: 20px;
     width: 800px;
     text-align: center;
 }
@@ -81,10 +75,6 @@ a{
 }
 
 .calendario{
-    display: flex;
-    flex-wrap: wrap; /* Permite el ajuste de elementos para pantallas más pequeñas */
-    justify-content: center; /* Centrado por defecto */
-    width: 100%; /* Para pantallas pequeñas, ocupan todo el ancho */
     list-style: none;
     display: grid;
     width: 100%;
@@ -323,7 +313,6 @@ a{
     margin-top: -5px;
 }
 
-
 .task-astro{
     border-left-color: rgb(41, 0, 66);
     background: rgb(183, 91, 117);
@@ -359,108 +348,4 @@ a{
 
 .task:hover .task-detail{
     opacity: 1;
-}
-
-/* PANTALLAS GRANDES */
-@media screen and (max-width:1920px) {
-    
-}
-
-
-/* TABLETS */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    h2{
-        font-size: 3vw;
-    }
-    .login-text{
-        display: none;
-    }
-    .logo-text{
-        display: none;
-    }
-    #banner{
-        height: 400px;
-    }
-    #search{
-        height: 200px;
-    }
-    .container{
-        max-width: 720px;
-    }
-    .card-banner{
-        padding: 0px 75px;
-    }
-    .movies-grid{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(4,1fr);
-    }
-    .d-form{
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .d-iframe{
-        width: 100%;
-    }
-
-    #footer {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-    }
-}
-
-/* CELULARES */
-@media screen and (max-width: 767px) {
-    h2{
-        font-size: 3vw;
-    }
-
-    .h2-subtitle{
-        font-size: 5vw;
-    }
-    .login-text{
-        display: none;
-    }
-    .logo-text{
-        display: none;
-    }
-    #banner{
-        height: 300px;
-    }
-    #search{
-        height: 200px;
-    }
-    .container{
-        max-width: 420px;
-    }
-    .card-banner{
-        padding: 0px 50px;
-    }
-    .movies-grid{
-        grid-template-columns: repeat(1,1fr);
-    }
-
-    .d-form{
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .d-iframe{
-        width: 100%;
-    }
-
-    .btn-cac{
-        font-size: 1vh;
-    }
-    #footer {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #footer a{
-        padding: 2px 0px;
-    }
 }
