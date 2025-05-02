@@ -3,83 +3,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 * {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    font-family: "Montserrat", ;
     padding: 0;
-    background-image: url(img/fondocalendario.png);
-    background-color: transparent;
+    margin-bottom: 2px;
+    background-image: url(img/fondocalendario.png) ;
+    background-color: #d1b0b0;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
 }
-
-
 
 /*mayo*/
 header{
-    font-family: 'Kolker brush', cursive;
-    font-size: 140px;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 120px;
     text-align: center;
-    color: #940c60;
-    text-shadow: #47052E 4px 4px 10px;
+    color: #e0d5bc;
+    text-shadow: #3fb1f3 4px 4px 10px;
 }
+
 /*parrafo de mayo*/
-p{
+.parrafo-header{
     text-align: center;
     font-size: 20px;
+    color: #e0d5bc;
+    font-family: "Press Start 2P", system-ui;
+    text-shadow: #5c0040 4px 4px 10px;
 }
+
+.parrafo-footer{
+    text-align: center;
+    font-size: 20px;
+    color: #ffadd6;
+    font-family: "Press Start 2P", system-ui;
+    text-shadow: #5c0040 4px 4px 10px;
+}
+
 footer{
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
+
 }
+
 a{
     text-decoration: none;
-    color: #700c4a;
+    color: #f5ff62;
+    text-shadow: #cc5627 4px 4px 10px;
 }
 
 /*calendario*/
-/* Estilos para el contenedor-calendario */
-#contenedor-calendario {
-    max-width: 1200px; /* Ancho máximo para mantener forma */
-    margin: 0 auto; /* Centrar en la pantalla */
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-}
 
-.torta{
-    width: 50px;
-    height: 50px;
-    margin-left: 50px;
-}
-.globos{
-    width: 50px;
-    height: 50px;
-    margin-left: 1200px;;
-    
-}
+
 
  /* Estilos para el calendario */
+ #contenedor-calendario {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #d1b0b0; /* Fondo blanco sólido para tapar imagen */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 2px solid #940c60;
+    position: relative;
+    z-index: 1;
+}
 .calendario {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* 7 columnas para la semana */
-    grid-auto-rows: 80px; /* Altura para cada fila */
+    grid-auto-rows: 90px; /* Altura para cada fila */
 }
 
 /* Estilos para los días */
 .dia {
-    padding: 0px;
+    padding: 5px 15px;
     text-align: right;
-    border: 1px solid #940c60;
+    border-left: 1px solid #940c60;
+    border-bottom: 1px solid #940c60;
+    border-right: 1px solid #940c60;
+    border-top: 1px solid #940c60;
     font-size: 15px;
+    background: #ffed879a;
+}
+.dia-semana{
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 20px;
+    padding-top: 20px;
+    color: #700c4a;
+    text-shadow: 2px 2px 2px rgb(255, 22, 150);
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #940c60;
+    background: #e455ad;
+}
+
+.dia-abril{
+    font-size: 15px;
+    text-align: right;
+    padding: 10px 15px;
+    border-left: 1px solid #940c60;
+    border-bottom: 1px solid #940c60;
+    border-right: 1px solid #940c60;
+    border-top: 1px solid #940c60;
     background: #fdf5aa9a;
+    color: rgba(0, 0, 0, 0.482);
 }
 
 /* Estilos para las tareas */
@@ -90,47 +126,6 @@ a{
     border-left: 2px solid #940c60;
     text-align: left;
 }
-
-/* Media queries para pantallas más pequeñas */
-@media (max-width: 768px) { /* Tablets y pantallas pequeñas */
-    header {
-        font-size: 80px; /* Reduce tamaño de encabezado */
-    }
-
-    #contenedor-calendario {
-        padding: 10px;
-        width: 100%; /* Ancho completo para pantallas pequeñas */
-    }
-
-    .calendario {
-        grid-template-columns: repeat(4, 1fr); /* 4 columnas para pantallas más pequeñas */
-    }
-
-    .dia {
-        font-size: 12px; /* Reduce el tamaño del texto */
-    }
-
-    .task {
-        font-size: 12px; /* Reduce el tamaño del texto */
-    }
-}
-
-/* Media queries para pantallas muy pequeñas (celulares) */
-@media (max-width: 480px) {
-    header {
-        font-size: 50px; /* Ajusta el tamaño del encabezado */
-    }
-
-    .calendario {
-        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas para celulares */
-    }
-
-    .dia {
-        padding: 8px; /* Reduce el padding */
-        font-size: 10px; /* Reduce el tamaño del texto */
-    }
-}
-
 .dia:nth-of-type(7n + 7){
     border-right: none;
 }
@@ -185,28 +180,7 @@ a{
     
 }
 
-.dia-semana{
-    font-size: 40px;
-    font-family: 'Kolker brush', cursive;
-    margin-top: 20px;
-    color: #700c4a;
-    text-shadow: 2px 2px 2px rgb(255, 22, 150);
-    text-align: center;
-    font-weight: bold;
-    border: 1px solid #940c60;
-    background: #ff53bd;
-}
 
-.dia-abril{
-    font-size: 15px;
-    text-align: right;
-    padding: 14px 20px;
-    border-left: 1px solid #940c60;
-    border-bottom: 1px solid #940c60;
-    border-right: 1px solid #940c60;
-    background: #fdf5aa9a;
-    color: rgba(0, 0, 0, 0.482);
-}
 
 
 .task{
@@ -216,11 +190,11 @@ a{
     font-size: 14px;
 }
 
-/*dinamica comunidad*/
+/*dinamicas */
 .task-dinamica-comunidad-1{
-    border-left-color: rgb(165, 141, 0);
-    background: rgb(255, 233, 111);
-    color: rgb(195, 115, 11);
+    border-left-color: rgb(126, 0, 165);
+    background: rgb(183, 57, 221);
+    color: rgb(55, 6, 100);
     font-weight: bold;
     align-self: end;
     grid-row: 2;
@@ -228,9 +202,9 @@ a{
     margin-top: -5px;
 }
 .task-dinamica-comunidad-2{
-    border-left-color: rgb(165, 141, 0);
-    background: rgb(255, 233, 111);
-    color: rgb(195, 115, 11);
+    border-left-color: rgb(126, 0, 165);
+    background: rgb(183, 57, 221);
+    color: rgb(55, 6, 100);
     font-weight: bold;
     align-self: end;
     grid-row: 3;
@@ -238,9 +212,9 @@ a{
     margin-top: -5px;
 }
 .task-dinamica-comunidad-3{
-    border-left-color: rgb(9, 13, 132);
-    background: rgb(140, 175, 247);
-    color: rgb(2, 30, 115);
+    border-left-color: rgb(126, 0, 165);
+    background: rgb(183, 57, 221);
+    color: rgb(55, 6, 100);
     font-weight: bold;
     align-self: end;
     grid-row: 4;
@@ -248,9 +222,9 @@ a{
     margin-top: -5px;
 }
 .task-dinamica-comunidad-4{
-    border-left-color: rgb(9, 13, 132);
-    background: rgb(140, 175, 247);
-    color: rgb(2, 30, 115);
+    border-left-color: rgb(126, 0, 165);
+    background: rgb(183, 57, 221);
+    color: rgb(55, 6, 100);
     font-weight: bold;
     align-self: end;
     grid-row: 5;
@@ -258,9 +232,9 @@ a{
     margin-top: -5px;
 }
 .task-dinamica-comunidad-5{
-    border-left-color: rgb(9, 13, 132);
-    background: rgb(140, 175, 247);
-    color: rgb(2, 30, 115);
+    border-left-color: rgb(126, 0, 165);
+    background: rgb(183, 57, 221);
+    color: rgb(55, 6, 100);
     font-weight: bold;
     align-self: end;
     grid-row: 6;
@@ -269,9 +243,9 @@ a{
 }
 
 .task-dinamica-sub{
-    border-left-color: rgb(9, 13, 132);
-    background: rgb(140, 175, 247);
-    color: rgb(2, 30, 115);
+    border-left-color: rgb(132, 93, 9);
+    background: rgb(255, 221, 108);
+    color: rgb(115, 2, 87);
     font-weight: bold;
     align-self: end;
     grid-row: 2;
@@ -279,9 +253,9 @@ a{
     margin-top: -5px;
 }
 .task-dinamica-extensible{
-    border-left-color: rgb(9, 13, 132);
-    background: rgb(140, 175, 247);
-    color: rgb(2, 30, 115);
+    border-left-color: rgb(255, 0, 0);
+    background: rgb(247, 140, 224);
+    color: rgb(36, 2, 115);
     font-weight: bold;
     align-self: end;
     grid-row: 3;
@@ -289,8 +263,8 @@ a{
     margin-top: -5px;
 }
 .task-variedad{
-    border-left-color: rgb(9, 13, 132);
-    background: rgb(140, 175, 247);
+    border-left-color: rgb(19, 132, 9);
+    background: rgb(140, 247, 167);
     color: rgb(2, 30, 115);
     font-weight: bold;
     align-self: end;
@@ -299,8 +273,8 @@ a{
     margin-top: -5px;
 }
 .task-bingo{
-    border-left-color: rgb(9, 13, 132);
-    background: rgb(140, 175, 247);
+    border-left-color: rgb(132, 9, 95);
+    background: rgb(140, 178, 247);
     color: rgb(2, 30, 115);
     font-weight: bold;
     align-self: end;
@@ -352,9 +326,9 @@ a{
 }
 
 .task-torneo-dbd{
-    border-left-color: rgb(0, 84, 52);
-    background: rgb(175, 243, 195);
-    color: rgb(11, 189, 195);
+    border-left-color: rgb(132, 9, 130);
+    background: rgb(255, 84, 158);
+    color: rgb(115, 2, 68);
     font-weight: bold;
     align-self: end;
     grid-row: 5;
@@ -363,9 +337,9 @@ a{
 }
 
 .task-torneo-kukoro{
-    border-left-color: rgb(41, 0, 66);
-    background: rgb(183, 91, 117);
-    color: rgb(70, 0, 41);
+    border-left-color: rgb(132, 9, 130);
+    background: rgb(255, 84, 158);
+    color: rgb(115, 2, 68);
     font-weight: bold;
     align-self: end;
     grid-row: 6;
@@ -385,9 +359,9 @@ a{
 }
 
 .task-cine-2{
-    border-left-color: rgb(40, 216, 0);
-    background: rgb(151, 213, 157);
-    color: rgb(186, 40, 191);
+    border-left-color: rgb(76, 0, 255);
+    background: rgb(113, 224, 234);
+    color: rgb(126, 1, 146);
     font-weight: bold;
     align-self: end;
     grid-row: 4;
@@ -396,9 +370,9 @@ a{
 }
 
 .task-cine-3{
-    border-left-color: rgb(41, 0, 66);
-    background: rgb(183, 91, 117);
-    color: rgb(70, 0, 41);
+    border-left-color: rgb(76, 0, 255);
+    background: rgb(113, 224, 234);
+    color: rgb(126, 1, 146);
     font-weight: bold;
     align-self: end;
     grid-row: 5;
@@ -407,9 +381,9 @@ a{
 }
 
 .task-cine-4{
-    border-left-color: rgb(255, 0, 38);
-    background: rgb(252, 201, 106);
-    color: rgb(195, 115, 11);
+    border-left-color: rgb(76, 0, 255);
+    background: rgb(113, 224, 234);
+    color: rgb(126, 1, 146);
     font-weight: bold;
     align-self: end;
     grid-row: 6;
@@ -441,6 +415,46 @@ body {
 
 header {
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: #d1b0b0;
     padding: 10px;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) { /* Tablets y pantallas pequeñas */
+    header {
+        font-size: 80px; /* Reduce tamaño de encabezado */
+    }
+
+    #contenedor-calendario {
+        padding: 10px;
+        width: 100%; /* Ancho completo para pantallas pequeñas */
+    }
+
+    .calendario {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas para pantallas más pequeñas */
+    }
+
+    .dia {
+        font-size: 12px; /* Reduce el tamaño del texto */
+    }
+
+    .task {
+        font-size: 12px; /* Reduce el tamaño del texto */
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (celulares) */
+@media (max-width: 480px) {
+    header {
+        font-size: 50px; /* Ajusta el tamaño del encabezado */
+    }
+
+    .calendario {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas para celulares */
+    }
+
+    .dia {
+        padding: 8px; /* Reduce el padding */
+        font-size: 10px; /* Reduce el tamaño del texto */
+    }
 }
